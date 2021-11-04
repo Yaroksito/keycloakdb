@@ -2,16 +2,20 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   annotations:
-    description: Route for application's https service.
-    openshift.io/host.generated: "true"
   labels:
-    application: keycloakdb
-  name: keycloakdb
+    app.kubernetes.io/instance: keycloakdb
+    app.kubernetes.io/name: keycloak
+  name: keycloak
   namespace: keycloakdb
 spec:
-  host: keycloakdb-postgres-operator.apps.lcc570vo.eastus.aroapp.io
+  host: keycloak-keycloakdb.apps.tk2s6gya.eastus.aroapp.io
+  port:
+    targetPort: port-1
   tls:
-    termination: passthrough
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
   to:
     kind: Service
     name: keycloak
+    weight: 100
+  wildcardPolicy: None
