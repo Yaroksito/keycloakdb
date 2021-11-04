@@ -4,3 +4,5 @@ resources:
 - postgres.yaml
 - keycloak.yaml
 - namespace.yaml
+- service-keycloak.yaml
+- route.yaml
