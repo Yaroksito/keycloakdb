@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    description: Route for application's https service.
+    openshift.io/host.generated: "true"
+  labels:
+    application: keycloakdb
+  name: keycloakdb
+  namespace: keycloakdb
+spec:
+  host: keycloakdb-postgres-operator.apps.lcc570vo.eastus.aroapp.io
+  tls:
+    termination: passthrough
+  to:
+    kind: Service
+    name: keycloak
