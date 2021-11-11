@@ -6,7 +6,7 @@ spec:
   image: registry.developers.crunchydata.com/crunchydata/crunchy-postgres:centos8-13.4-1
   postgresVersion: 13
   instances:
-    - replicas: 2
+    - replicas: 3
       dataVolumeClaimSpec:
         accessModes:
         - "ReadWriteOnce"
