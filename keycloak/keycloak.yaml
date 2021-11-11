@@ -6,6 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: keycloak
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: keycloak
@@ -14,7 +15,6 @@ spec:
       labels:
         app.kubernetes.io/name: keycloak
     spec:
-      replicas: 1            
       containers:
       - image: quay.io/keycloak/keycloak:latest
         name: keycloak
