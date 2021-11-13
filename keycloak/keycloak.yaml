@@ -5,6 +5,7 @@ metadata:
   namespace: keycloak-db
   labels:
     app.kubernetes.io/name: keycloak
+    app: keycloakdb
 spec:
   replicas: 1
   selector:
