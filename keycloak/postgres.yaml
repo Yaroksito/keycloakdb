@@ -1,7 +1,7 @@
 apiVersion: postgres-operator.crunchydata.com/v1beta1
 kind: PostgresCluster
 metadata:
-  name: keycloakdb
+  name: keycloak
 spec:
   image: registry.developers.crunchydata.com/crunchydata/crunchy-postgres:centos8-13.4-1
   postgresVersion: 13
@@ -21,7 +21,7 @@ spec:
               topologyKey: kubernetes.io/hostname
               labelSelector:
                 matchLabels:
-                  postgres-operator.crunchydata.com/cluster: keycloakdb
+                  postgres-operator.crunchydata.com/cluster: keycloak
                   postgres-operator.crunchydata.com/instance-set: "00"
   backups:
     pgbackrest:

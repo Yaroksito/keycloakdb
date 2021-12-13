@@ -3,12 +3,12 @@ kind: Route
 metadata:
   annotations:
   labels:
-    app.kubernetes.io/instance: keycloakdb
+    app.kubernetes.io/instance: keycloak
     app.kubernetes.io/name: keycloak
   name: keycloak
-  namespace: keycloakdb
+  namespace: keycloak
 spec:
-  host: keycloak-keycloakdb.apps.tk2s6gya.eastus.aroapp.io
+  host: keycloak-keycloak.apps.tk2s6gya.eastus.aroapp.io
   port:
     targetPort: port-1
   tls:
