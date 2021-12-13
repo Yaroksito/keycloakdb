@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: keycloak
-  namespace: keycloak-db
+  namespace: keycloakdb
   labels:
     app.kubernetes.io/name: keycloak
     app: keycloakdb
